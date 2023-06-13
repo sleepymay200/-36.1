@@ -1,0 +1,74 @@
+﻿<Window x:Class="lab_3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:lab_3"
+        mc:Ignorable="d"
+        Title="Monster game" Height="450" Width="800">
+    <Grid>
+        <StackPanel VerticalAlignment="Center">
+            <TextBlock x:Name="monsterHPLabel"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Center"
+                       Margin="0 0 0 10">
+
+            </TextBlock>
+            <Grid>
+                <Rectangle x:Name="monsterHPCurrent"
+                       Width="100"
+                       Height="10"
+                       Fill="DarkGreen"
+                       Margin="0 0 0 10">
+                </Rectangle>
+                <Grid>
+                    <Rectangle x:Name="monsterHPCurrent2"
+                       Width="100"
+                       Height="10"
+                       Fill="Green"
+                       Margin="0 0 0 10">
+                    </Rectangle>
+                </Grid>
+            </Grid>
+            <TextBlock Text=""
+                       x:Name="monsterActionLabel"
+                       TextAlignment="Center"
+                       HorizontalAlignment="Center">
+
+            </TextBlock>
+            <TextBlock Text=""
+                       x:Name="advLogBlock"
+                       TextAlignment="Center"
+                       HorizontalAlignment="Center">
+            </TextBlock>
+            <StackPanel Orientation="Horizontal"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Center">
+                <Button Width="120"
+                        Height="24"
+                        Click="Button_Click">
+                    <TextBlock Text="Ударить монстра">
+                    </TextBlock>
+                </Button>
+                <Button Width="120"
+                        Height="24"
+                        Margin="10 0 0 0" Click="Button_Click_1">
+                    <TextBlock Text="Отрезать кусок мяса">
+                    </TextBlock>
+                </Button>
+            </StackPanel>
+            <StackPanel Margin="0 30 0 0">
+                <TextBlock x:Name="MeatCountLabel"
+                       TextAlignment="Center"
+                       HorizontalAlignment="Center">
+                </TextBlock>
+                <Button Click="Button_Click_2"
+                    Width="120"
+                    Height="24">
+                    <TextBlock Text="Продать мясо">
+                    </TextBlock>
+                </Button>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
